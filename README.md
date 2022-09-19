@@ -1,7 +1,5 @@
 # ![BeCode Test Task]
 
-> ### Example Laravel codebase containing real world examples (CRUD, auth, advanced patterns and more) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
-
 This repo is functionality complete — Loan based application!
 
 ----------
