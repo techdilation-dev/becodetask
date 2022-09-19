@@ -1,4 +1,4 @@
-# ![BeCode Test Task](https://laravelnews.imgix.net/images/laravel-featured.png?dpr=2&ixlib=php-3.3.1)
+# ![BeCode Test Task]
 
 > ### Example Laravel codebase containing real world examples (CRUD, auth, advanced patterns and more) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
 
