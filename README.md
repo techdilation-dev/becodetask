@@ -25,6 +25,9 @@ Please check the official laravel installation guide for server requirements bef
 The api can be accessed at [http://localhost:8000/api/v1](http://localhost:8000/api/v1)
 
 
+## Postman collections
+Use "Loan Task.postman_collection.json" file for Postman API request
+    
 ----------
 
 # Testing API
