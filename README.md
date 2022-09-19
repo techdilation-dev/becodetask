@@ -21,11 +21,8 @@ run these commands within project root folder step by step -
 
 Please check the official laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
 
-The api can be accessed at [http://localhost:8000/api/v1](http://localhost:8000/api/v1).
-
 ## API Specification
-
-This application adheres to the api specifications set by the [Thinkster](https://github.com/gothinkster) team. This helps mix and match any backend with any other frontend without conflicts.
+The api can be accessed at [http://localhost:8000/api/v1](http://localhost:8000/api/v1)
 
 
 ----------
