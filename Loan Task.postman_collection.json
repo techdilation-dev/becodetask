@@ -1,0 +1,180 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Loan Task",
+		"_postman_id": "30e7bcf4-2083-5cd6-0783-8d493031239f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/v1/login",
+			"request": {
+				"url": "localhost:8000/api/v1/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "To get token for customer and admin \nadmin creds = \nemail - admin@email.com\npassword - password\n\nCustomer 1 creds =\nemail - firstcustomer@email.com\npassword - first\n\nCustomer 2 creds =\nemail - secondcustomer@email.com\npassword - second"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/loans/create",
+			"request": {
+				"url": "localhost:8000/api/v1/loans/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjZkNWRhMGI5YWRiNGU3YWY5NzE4YjZmNGQxMjY1NzBmYWFjMDA1YjRkN2I0YjkzZDU3OGY3MzcyZTcxOTc4MjEzMTk4OWI1N2VhNTcxNjkiLCJpYXQiOjE2NjM1MDE2MjIuNTgzNTAxLCJuYmYiOjE2NjM1MDE2MjIuNTgzNTAzLCJleHAiOjE2OTUwMzc2MjIuNTc5OTE0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.TQ5NHqBn9-nOZkxllrWcukVDzl6qcRQaxBYLD0MFCU-doevaEu1xDAKHOIb7xNQxX2logicX3k7u5yAnWSJej58uCRmXRbwnWgNSlf9X9zFEeWMyaVrBS_nt72l0mzUjdnMBUjfa1brzRNCe0hTdbkxj1_UDZgUOSmA0VKb1278Mhb1UI6b_lckZK1KRq-ufGqziCh7uXqNIxcCAgosXeC043p8mkgqTvGbbc3pyehy7JEbh-bKcjNHG5O7wNkvymBlzI3f6i52E7IAQBn7mxg6cXgwgOQl3tc_Df68slXJwbiozpAohfDUB1s-YqXptbJ6r9Z8YW6V_rA0H6u2DY-uWph27tqo5NSbG650_zYRQLK4hvkOoSyFcuOy0ch5K-z6XV_rVh7obT72n_FkKhoWBxJEG6qcYq_YDx26uXn2f6dFdnpV7kGhsaE1z4H6Ll8_7AjTqbtdhkjouj-0DqqZtQ0hDiDk7ximLx2GpotCdcEMuvlWr8hvI_8eDwnth3aktqE9zuNuoylXXlakQB6c8hMFdJ0nOfCW7i_4EH9nrkA9VV1xXtqM5OAJv4PUOeiIm1dXByvpGFocsAgxxDLJe_TALF71JfUAcTSJqjDvGsRzJIc8mSc_DscuF4uFjvbekGy08R9oLZ3o_p-rkqscKt2FKJnZ9xMB29Ss56xw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "10.000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "term",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "7th Oct 2022",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "To create loan"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/loans",
+			"request": {
+				"url": "localhost:8000/api/v1/loans",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjZkNWRhMGI5YWRiNGU3YWY5NzE4YjZmNGQxMjY1NzBmYWFjMDA1YjRkN2I0YjkzZDU3OGY3MzcyZTcxOTc4MjEzMTk4OWI1N2VhNTcxNjkiLCJpYXQiOjE2NjM1MDE2MjIuNTgzNTAxLCJuYmYiOjE2NjM1MDE2MjIuNTgzNTAzLCJleHAiOjE2OTUwMzc2MjIuNTc5OTE0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.TQ5NHqBn9-nOZkxllrWcukVDzl6qcRQaxBYLD0MFCU-doevaEu1xDAKHOIb7xNQxX2logicX3k7u5yAnWSJej58uCRmXRbwnWgNSlf9X9zFEeWMyaVrBS_nt72l0mzUjdnMBUjfa1brzRNCe0hTdbkxj1_UDZgUOSmA0VKb1278Mhb1UI6b_lckZK1KRq-ufGqziCh7uXqNIxcCAgosXeC043p8mkgqTvGbbc3pyehy7JEbh-bKcjNHG5O7wNkvymBlzI3f6i52E7IAQBn7mxg6cXgwgOQl3tc_Df68slXJwbiozpAohfDUB1s-YqXptbJ6r9Z8YW6V_rA0H6u2DY-uWph27tqo5NSbG650_zYRQLK4hvkOoSyFcuOy0ch5K-z6XV_rVh7obT72n_FkKhoWBxJEG6qcYq_YDx26uXn2f6dFdnpV7kGhsaE1z4H6Ll8_7AjTqbtdhkjouj-0DqqZtQ0hDiDk7ximLx2GpotCdcEMuvlWr8hvI_8eDwnth3aktqE9zuNuoylXXlakQB6c8hMFdJ0nOfCW7i_4EH9nrkA9VV1xXtqM5OAJv4PUOeiIm1dXByvpGFocsAgxxDLJe_TALF71JfUAcTSJqjDvGsRzJIc8mSc_DscuF4uFjvbekGy08R9oLZ3o_p-rkqscKt2FKJnZ9xMB29Ss56xw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "To list all loans of a signed in customer"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/loans/repay",
+			"request": {
+				"url": "localhost:8000/api/v1/loans/repay",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjZkNWRhMGI5YWRiNGU3YWY5NzE4YjZmNGQxMjY1NzBmYWFjMDA1YjRkN2I0YjkzZDU3OGY3MzcyZTcxOTc4MjEzMTk4OWI1N2VhNTcxNjkiLCJpYXQiOjE2NjM1MDE2MjIuNTgzNTAxLCJuYmYiOjE2NjM1MDE2MjIuNTgzNTAzLCJleHAiOjE2OTUwMzc2MjIuNTc5OTE0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.TQ5NHqBn9-nOZkxllrWcukVDzl6qcRQaxBYLD0MFCU-doevaEu1xDAKHOIb7xNQxX2logicX3k7u5yAnWSJej58uCRmXRbwnWgNSlf9X9zFEeWMyaVrBS_nt72l0mzUjdnMBUjfa1brzRNCe0hTdbkxj1_UDZgUOSmA0VKb1278Mhb1UI6b_lckZK1KRq-ufGqziCh7uXqNIxcCAgosXeC043p8mkgqTvGbbc3pyehy7JEbh-bKcjNHG5O7wNkvymBlzI3f6i52E7IAQBn7mxg6cXgwgOQl3tc_Df68slXJwbiozpAohfDUB1s-YqXptbJ6r9Z8YW6V_rA0H6u2DY-uWph27tqo5NSbG650_zYRQLK4hvkOoSyFcuOy0ch5K-z6XV_rVh7obT72n_FkKhoWBxJEG6qcYq_YDx26uXn2f6dFdnpV7kGhsaE1z4H6Ll8_7AjTqbtdhkjouj-0DqqZtQ0hDiDk7ximLx2GpotCdcEMuvlWr8hvI_8eDwnth3aktqE9zuNuoylXXlakQB6c8hMFdJ0nOfCW7i_4EH9nrkA9VV1xXtqM5OAJv4PUOeiIm1dXByvpGFocsAgxxDLJe_TALF71JfUAcTSJqjDvGsRzJIc8mSc_DscuF4uFjvbekGy08R9oLZ3o_p-rkqscKt2FKJnZ9xMB29Ss56xw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "repay_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "3.3333333333333",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "To repay the loan for schedule repayments"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/loans/approval",
+			"request": {
+				"url": "localhost:8000/api/v1/loans/approval",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjljNzE3MGQ1ODNkZjczYzhiZTA1OGFhYWVmODAwYWI3NGQ5NjU4ZTE1OWRjNGE4YzVmMDJiZWNmNzA5YmViNDczMWNjODBkZTNjOWQwZGQiLCJpYXQiOjE2NjM1MDI2MjMuMzgzNSwibmJmIjoxNjYzNTAyNjIzLjM4MzUwMiwiZXhwIjoxNjk1MDM4NjIzLjM3OTM3OCwic3ViIjoiMSIsInNjb3BlcyI6W119.EHaMxuX9SPXVklbd56HvGZ2QwNwk_5r4tjQlaRQrxlmSgYrs9PLnSehfjeTZaB0wMTmma1K_mU0uhwuTq4ew1EdzbSLHvP9LOig5FnRW6g6tZBsJf6LaGHRzNwDMpF4hcIJ-VMTyiqiQiDSPXEV17XN51DIBxPGWSwafY7ls_ee1i-HQOoqvHgcr3q87VmpGgnxzWajWb4U-Bgu4s4Qi9gc00YtBqdW9rn47bFulDhVri-LCT7WHqENg28Kws7LNx9pxgY7pNM8XgAwDz13wb2ihKgi1OMAWtvQ9Hm6YPehHtWVd3RLqvSa0rEL7Cq98UmBDx2Z-YGCLbI1n1Rl3g86J9uigPnq7Um6USFjZIGB8mS4P0x0leyTJFH7tCzddQDjzdxxInAe8pWi6MubedNWeljO8y_hezKWgDsFwjssmmimVAZUReGgMq8gGRBu2OiaFWu03hT9Sz1guL8krAC4pHMnOFX642GeFr3Q4qOJmS6G1QBQ_aEBdg_blJeQkYEm6_qbvIVIRxtxPjzq83TgrJPdIKrQX4f5jYCeE2LeY5QX8EAfUQLXNP3hWW8Jb0Zc4e5mu3FQEOUQ4RMEgHjIZb-otHFVAJ1419td1eKgO4TaF2Tsab4WamgMKiuwTSIVQRu8HSFkNFtemeBXuqSCp__WCaxsm--xVYlb7vwc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "loan_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "To mark approved from admin for any loan"
+			},
+			"response": []
+		}
+	]
+}
