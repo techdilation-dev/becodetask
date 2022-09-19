@@ -26,7 +26,7 @@ The api can be accessed at [http://localhost:8000/api/v1](http://localhost:8000/
 
 
 ## Postman collections
-Use "Loan Task.postman_collection.json" file for Postman API request
+Use "Loan Task.postman_collection.json" file for Postman API request, you will find this file at root path
     
 ----------
 
